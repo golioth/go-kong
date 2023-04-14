@@ -12,7 +12,7 @@ type KeyAuth struct {
 	ID        *string   `json:"id,omitempty" yaml:"id,omitempty"`
 	Key       *string   `json:"key,omitempty" yaml:"key,omitempty"`
 	TTL       *int      `json:"ttl,omitempty" yaml:"ttl,omitempty"`
-	Tags      []*string `json:"tags,omitempty" yaml:"tags,omitempty"`
+	Tags      []*string `json:"tags" yaml:"tags,omitempty"`
 }
 
 func (c KeyAuth) id() *string {
@@ -76,7 +76,7 @@ type JWTAuth struct {
 	Key          *string   `json:"key,omitempty" yaml:"key,omitempty"`
 	RSAPublicKey *string   `json:"rsa_public_key,omitempty" yaml:"rsa_public_key,omitempty"`
 	Secret       *string   `json:"secret,omitempty" yaml:"secret,omitempty"`
-	Tags         []*string `json:"tags,omitempty" yaml:"tags,omitempty"`
+	Tags         []*string `json:"tags" yaml:"tags,omitempty"`
 }
 
 func (c JWTAuth) id() *string {
